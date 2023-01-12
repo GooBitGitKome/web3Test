@@ -1,0 +1,112 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "decimals",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"balanceOf(address)": {
+					"details": "returns the tokens owned by `account`."
+				},
+				"decimals()": {
+					"details": "returns the decimal places of a token"
+				},
+				"transfer(address,uint256)": {
+					"details": "transfers the `amount` of tokens from caller's account to the `recipient` account. returns boolean value indicating the operation status. Emits a {Transfer} event"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/MBTFaucet.sol": "ERC20"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/MBTFaucet.sol": {
+			"keccak256": "0x885f874330baf059eb1c3fcb9d803ac9882a1462846a4cd9d309585249f1b1fb",
+			"license": "UNLISCENSED",
+			"urls": [
+				"bzz-raw://e2401eaa2ba8216b256a56d17c689d71424a17b5f8ef1c2ca6d5407619ed3ddb",
+				"dweb:/ipfs/QmYxFXzGv1K9v6vi9nMCPvgu7cdJBmrHnrRnERP3YdYMfv"
+			]
+		}
+	},
+	"version": 1
+}
