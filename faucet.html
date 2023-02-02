@@ -6,7 +6,7 @@
 </head>
 <body>
  <p>Faucetのデモサイト</p>
- <button type=“button” onclick="doFunction();">トークンをゲットする</button>
+ <button type=“button” onclick="doFunction();">トークンをゲットする!</button>
  <script type="text/javascript">
 
   // メタマスクに接続する
@@ -20,74 +20,74 @@
   // コントラクトに接続する
   async function loadContract(){
    return await new window.web3.eth.Contract([
-    {
-     "inputs": [],
-     "name": "send",
-     "outputs": [],
-     "stateMutability": "nonpayable",
-     "type": "function"
-    },
-    {
-     "inputs": [
-      {
-       "internalType": "uint256",
-       "name": "_amount",
-       "type": "uint256"
-      }
-     ],
-     "name": "setFaucetDripAmount",
-     "outputs": [],
-     "stateMutability": "nonpayable",
-     "type": "function"
-    },
-    { 
-     "inputs": [
-      {
-       "internalType": "address",
-       "name": "_tokenAddr",
-       "type": "address"
-      }
-     ],
-     "name": "setTokenAddress",
-     "outputs": [],
-     "stateMutability": "nonpayable",
-     "type": "function"
-    },
-    {
-     "inputs": [
-      {
-       "internalType": "address",
-       "name": "_mbtAddress",
-       "type": "address"
-      },
-      {
-       "internalType": "address",
-       "name": "_ownerAddress",
-       "type": "address"
-      }
-     ],
-     "stateMutability": "nonpayable",
-     "type": "constructor"
-    },
-    {
-     "inputs": [
-      {
-       "internalType": "address",
-       "name": "_receiver",
-       "type": "address"
-      },
-      {
-       "internalType": "uint256",
-       "name": "_amount",
-       "type": "uint256"
-      }
-     ],
-     "name": "withdrawTokens",
-     "outputs": [],
-     "stateMutability": "nonpayable",
-     "type": "function"
-    }
-   ],'0x64678e7Bea12278fa59540E49147490E9e20eE33');
+	{
+		"inputs": [],
+		"name": "send",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
+			}
+		],
+		"name": "setFaucetDripAmount",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_tokenAddr",
+				"type": "address"
+			}
+		],
+		"name": "setTokenAddress",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_mbtAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_ownerAddress",
+				"type": "address"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_receiver",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
+			}
+		],
+		"name": "withdrawTokens",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+],'0xfB279133281e09AD93c7e6Ee657330ab1Fcf99Dd');
   }
 
   // 利用者のメタマスクのウォレットアドレスを取得

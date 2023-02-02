@@ -19,11 +19,13 @@ interface ERC20 {
      *
      * returns boolean value indicating the operation status.
      *
-     * Emits a {Transfer} event
+     * Emits a {Transfer} event 
      */
     function transfer(address recipient, uint256 amount)
         external
         returns (bool);
+    
+    function send() external view returns (bool);
  
 }
 
@@ -39,7 +41,7 @@ contract MBTFaucet {
     mapping(address=>uint256) nextRequestAt;
     
     // No.of tokens to send when requested
-    uint256 faucetDripAmount = 1;
+    uint256 faucetDripAmount = 9;
     
     // Sets the addresses of the Owner and the underlying token
     constructor (address _mbtAddress, address _ownerAddress) {
@@ -59,7 +61,7 @@ contract MBTFaucet {
         require(nextRequestAt[msg.sender] < block.timestamp, "FaucetError: Try again later");
         
         // Next request from the address can be made only after 5 minutes         
-        nextRequestAt[msg.sender] = block.timestamp + (5 minutes); 
+        nextRequestAt[msg.sender] = block.timestamp + (1 minutes); 
         
         token.transfer(msg.sender,faucetDripAmount * 10**token.decimals());
     }  
